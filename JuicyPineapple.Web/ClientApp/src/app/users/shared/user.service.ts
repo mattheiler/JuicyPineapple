@@ -10,14 +10,14 @@ import { User } from '../../models';
 })
 export class UserService {
 
-  constructor(private readonly _apollo: Apollo) { }
+  constructor(private readonly _apollo: Apollo) {}
 
   getUser(id: string) {
     return this._apollo
       .query<{ user: User }>({
         query: gql`
           {
-            organization(id: ${id}) {
+            user(id: ${id}) {
               id
               name
             }
@@ -33,7 +33,7 @@ export class UserService {
       .query<{ users: User[] }>({
         query: gql`
           {
-            organizations {
+            users {
               id
               name
             }

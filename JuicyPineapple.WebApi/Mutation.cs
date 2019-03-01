@@ -1,4 +1,4 @@
-﻿namespace JuicyPineapple.Web
+﻿namespace JuicyPineapple.WebApi
 {
     public class Mutation
     {

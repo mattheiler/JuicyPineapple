@@ -10,7 +10,7 @@ import { Organization } from '../../models';
 })
 export class OrganizationService {
 
-  constructor(private readonly _apollo: Apollo) { }
+  constructor(private readonly _apollo: Apollo) {}
 
   getOrganization(id: string) {
     return this._apollo

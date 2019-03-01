@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { User } from '../../models';
 import { UserService } from '../shared';
@@ -8,13 +8,10 @@ import { UserService } from '../shared';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserComponent {
 
   organizations: Promise<User>;
 
   constructor(private readonly _service: UserService) {}
-
-  ngOnInit() {
-  }
 
 }

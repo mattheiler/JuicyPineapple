@@ -12,7 +12,7 @@ export class OrganizationComponent implements OnInit {
 
   organization: Organization;
 
-  constructor(private readonly _service: OrganizationService) { }
+  constructor(private readonly _service: OrganizationService) {}
 
   ngOnInit() {
   }

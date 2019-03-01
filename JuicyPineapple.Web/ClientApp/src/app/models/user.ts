@@ -5,4 +5,3 @@ export class User {
   name: string;
   organizations: OrganizationMembership[];
 }
-

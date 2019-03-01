@@ -3,7 +3,7 @@ using System.Linq;
 using JuicyPineapple.Core;
 using JuicyPineapple.Data;
 
-namespace JuicyPineapple.Web
+namespace JuicyPineapple.WebApi
 {
     public class Query
     {

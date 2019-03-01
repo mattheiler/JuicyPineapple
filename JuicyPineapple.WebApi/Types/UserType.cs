@@ -1,7 +1,7 @@
 ﻿using HotChocolate.Types;
 using JuicyPineapple.Core;
 
-namespace JuicyPineapple.Web.Types
+namespace JuicyPineapple.WebApi.Types
 {
     public class UserType : ObjectType<User>
     {

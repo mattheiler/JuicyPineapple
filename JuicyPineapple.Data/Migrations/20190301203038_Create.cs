@@ -8,8 +8,8 @@ namespace JuicyPineapple.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Organizations",
-                columns: table => new
+                "Organizations",
+                table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: true),
@@ -19,28 +19,25 @@ namespace JuicyPineapple.Data.Migrations
                 {
                     table.PrimaryKey("PK_Organizations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Organizations_Organizations_ParentId",
-                        column: x => x.ParentId,
-                        principalTable: "Organizations",
-                        principalColumn: "Id",
+                        "FK_Organizations_Organizations_ParentId",
+                        x => x.ParentId,
+                        "Organizations",
+                        "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
+                "Users",
+                table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Users", x => x.Id); });
 
             migrationBuilder.CreateTable(
-                name: "OrganizationMembership",
-                columns: table => new
+                "OrganizationMembership",
+                table => new
                 {
                     OrganizationId = table.Column<Guid>(nullable: false),
                     UserId = table.Column<Guid>(nullable: false)
@@ -49,40 +46,40 @@ namespace JuicyPineapple.Data.Migrations
                 {
                     table.PrimaryKey("PK_OrganizationMembership", x => new { x.OrganizationId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_OrganizationMembership_Organizations_OrganizationId",
-                        column: x => x.OrganizationId,
-                        principalTable: "Organizations",
-                        principalColumn: "Id",
+                        "FK_OrganizationMembership_Organizations_OrganizationId",
+                        x => x.OrganizationId,
+                        "Organizations",
+                        "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrganizationMembership_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
+                        "FK_OrganizationMembership_Users_UserId",
+                        x => x.UserId,
+                        "Users",
+                        "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrganizationMembership_UserId",
-                table: "OrganizationMembership",
-                column: "UserId");
+                "IX_OrganizationMembership_UserId",
+                "OrganizationMembership",
+                "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Organizations_ParentId",
-                table: "Organizations",
-                column: "ParentId");
+                "IX_Organizations_ParentId",
+                "Organizations",
+                "ParentId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrganizationMembership");
+                "OrganizationMembership");
 
             migrationBuilder.DropTable(
-                name: "Organizations");
+                "Organizations");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                "Users");
         }
     }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { User } from '../../models';
 import { UserService } from '../shared';
@@ -8,14 +8,12 @@ import { UserService } from '../shared';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent {
 
-  organizations: Promise<User[]>;
+  users: Promise<User[]>;
 
-  constructor(private readonly _service: UserService) {}
-
-  ngOnInit() {
-    this.organizations = this._service.getUsers();
+  constructor(private readonly _service: UserService) {
+    this.users = this._service.getUsers();
   }
 
 }

@@ -1,6 +1,6 @@
 ﻿using HotChocolate.Types;
 
-namespace JuicyPineapple.Web.Types
+namespace JuicyPineapple.WebApi.Types
 {
     public class SubscriptionType : ObjectType<Subscription>
     {
