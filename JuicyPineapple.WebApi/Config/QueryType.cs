@@ -1,8 +1,8 @@
 ﻿using HotChocolate.Types;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
-    public class QueryType : ObjectType<Query>
+    internal class QueryType : ObjectType<Query>
     {
         protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
         {

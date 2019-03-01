@@ -1,8 +1,8 @@
 ﻿using HotChocolate.Types;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
-    public class SubscriptionType : ObjectType<Subscription>
+    internal class SubscriptionType : ObjectType<Subscription>
     {
         protected override void Configure(IObjectTypeDescriptor<Subscription> descriptor)
         {

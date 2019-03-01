@@ -1,9 +1,9 @@
 ﻿using HotChocolate.Types;
 using JuicyPineapple.Core;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
-    public class UserType : ObjectType<User>
+    internal class UserType : ObjectType<User>
     {
         protected override void Configure(IObjectTypeDescriptor<User> descriptor)
         {

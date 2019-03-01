@@ -1,9 +1,9 @@
 ﻿using HotChocolate.Types;
 using JuicyPineapple.Core;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
-    public class OrganizationMembershipType : ObjectType<OrganizationMembership>
+    internal class OrganizationMembershipType : ObjectType<OrganizationMembership>
     {
         protected override void Configure(IObjectTypeDescriptor<OrganizationMembership> descriptor)
         {

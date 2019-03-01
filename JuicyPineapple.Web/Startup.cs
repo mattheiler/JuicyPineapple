@@ -1,7 +1,7 @@
 using System.Linq;
 using JuicyPineapple.Core;
 using JuicyPineapple.Data;
-using JuicyPineapple.WebApi.Types;
+using JuicyPineapple.WebApi.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;

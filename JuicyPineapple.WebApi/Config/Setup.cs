@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
     public static class Setup
     {

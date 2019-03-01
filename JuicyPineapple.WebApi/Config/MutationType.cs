@@ -1,8 +1,8 @@
 ﻿using HotChocolate.Types;
 
-namespace JuicyPineapple.WebApi.Types
+namespace JuicyPineapple.WebApi.Config
 {
-    public class MutationType : ObjectType<Mutation>
+    internal class MutationType : ObjectType<Mutation>
     {
         protected override void Configure(IObjectTypeDescriptor<Mutation> descriptor)
         {
